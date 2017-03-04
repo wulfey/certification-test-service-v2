@@ -1,4 +1,23 @@
 Rails.application.configure do
+   
+  # devise says to define default url
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # set up for email sending even in dev mode
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = false
+
+  config.action_mailer.delivery_method = :smtp
+  
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => "587",
+    :authentication => :plain,
+    :user_name => "do-not-reply@jason.com",
+    :password => ENV["SMTP_ENTRY"],
+    :enable_starttls_auto => true
+  }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -8,6 +27,11 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+
+
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { :host => 'https://saas-udem-wulfey.c9users.io/'}
+
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
