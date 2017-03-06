@@ -6,6 +6,9 @@ default: &default
       password: <%= ENV['PASSWORD'] %>
       host:     <%= ENV['IP'] %>
 
+port: 5432
+
+
 development:
   <<: *default
   database: app_development
