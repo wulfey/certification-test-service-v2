@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
   
-
+  # this puts the projects underneath tenants root/tenant/project
+  resources :tenants do 
+    resources :projects
+  end
+  
+  
   resources :members
   get 'home/index'
 
