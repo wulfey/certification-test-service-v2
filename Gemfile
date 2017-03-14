@@ -17,7 +17,7 @@ gem 'therubyracer'
 
 gem 'milia'
 
-
+gem 'stripe'
 # images
 gem 'carrierwave'
 gem 'mini_magick'
