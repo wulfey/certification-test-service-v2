@@ -23,6 +23,9 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 gem 'aws-sdk', '~> 2'
+gem 'font-awesome-rails'
+
+gem 'font-awesome-sass'
 
 
 # use pg
