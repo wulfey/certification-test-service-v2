@@ -116,7 +116,7 @@ ActiveRecord::Schema.define(version: 20170315024320) do
     t.integer  "tenant_id"
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
-    t.boolean  "is_admin"
+    t.boolean  "is_admin",                     default: false
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
