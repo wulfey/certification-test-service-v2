@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
   
+  resources :user_projects
   resources :artifacts
   # this puts the projects underneath tenants root/tenant/project
   resources :tenants do 
-    resources :projects
+    resources :projects do 
+      get 'users', on: :member 
+      puts 'add_user', on: :member
+    end
   end
   
   
