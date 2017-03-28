@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+test_list = [
+  [ "Trucks", "How best to sell trucks to truckanados." ],
+  [ "Hybrids", "Efficiency, smugness, or both?" ],
+  [ "Supercars", "Ask to see their old car before the test drive." ],
+  [ "Sedans", "Only sell to olds." ],
+]
+
+test_list.each do |name, description|
+  Certtest.create( name: name, description: description )
+end

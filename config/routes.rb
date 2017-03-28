@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   
+  resources :certtests
   resources :user_projects
   resources :artifacts
   # this puts the projects underneath tenants root/tenant/project
