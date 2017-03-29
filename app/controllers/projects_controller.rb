@@ -21,6 +21,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+
   end
 
   # POST /projects
@@ -88,7 +89,7 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :details, :expected_completion_date, :tenant_id)
+      params.require(:project).permit(:title, :details, :expected_completion_date, :tenant_id, :certtest)
     end
     
     

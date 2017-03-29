@@ -6,6 +6,10 @@ class Project < ActiveRecord::Base
   validates_uniqueness_of :title
   validate :free_plan_can_only_have_one_project
   has_one :certtest
+  accepts_nested_attributes_for :certtest
+  attr_accessor :certtest
+  
+
   
   def free_plan_can_only_have_one_project
         if self.new_record? && (tenant.projects.count > 0) && (tenant.plan == 'free')

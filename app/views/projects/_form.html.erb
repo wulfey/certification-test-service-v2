@@ -34,6 +34,13 @@
     </div>
   </div>
   
+  <div class="control-group">
+      <%= f.label :CertificationTest %>
+      <%= f.select :certtest, options_for_select(Certtest.certnames), { include_blank: '--Test Title--' }, required: true, class: "form-control" %>
+  </div>
+      
+
+  
   
   <br />
   
